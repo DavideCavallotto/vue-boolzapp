@@ -4,7 +4,9 @@ const { createApp } = Vue
 
 createApp({
   data() {
-    return {
+    return {    
+         
+        activeUtent: 0,
         contacts: [
             {
             name: 'Michele',
@@ -169,6 +171,12 @@ createApp({
             }
             ]
       
+    }
+  },
+  methods: {
+    changeUser(index) {
+        this.activeUtent = index;
+        console.log('ho cliccato', index)
     }
   }
 }).mount('#app')

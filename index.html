@@ -45,7 +45,7 @@
                         </div>
                         <div class="contacts">
                             <ul class="list-contacts d-flex flex-column">
-                                <li class="contact d-flex gap-3 py-2 ps-2" v-for="(item,index) in contacts">                                    
+                                <li class="contact d-flex gap-3 py-2 ps-2" v-for="(item,index) in contacts" @click="changeUser(index)" :class="this.activeUtent === index ? 'focus-utent' : ''">                                    
                                     <img class="user-image" :src="item.avatar" alt="">  
                                     <div class="user-text">
                                         <p class="fw-bold">{{item.name}}</p>  
@@ -70,9 +70,9 @@
                         <div class="user-contact d-flex align-items-center gap-3 py-2 ps-2 justify-content-between"> 
                             
                             <div class="d-flex gap-3">
-                                <img class="user-image" src="./img/avatar_1.jpg" alt="">  
+                                <img class="user-image" :src="contacts[activeUtent].avatar" alt="">  
                                 <div class="user-text">
-                                    <p class="fw-bold">Liborio</p>  
+                                    <p class="fw-bold">{{contacts[activeUtent].name}}</p>  
                                     <p>Ultimo accesso oggi alle 12:00</p>                                     
                                     
                                 </div> 
@@ -90,7 +90,7 @@
 
                         <div class="chat">
                             <div class="send-msg container-flex-end">                                
-                                <p class="bg-green message">Hey, ciao.</p>                                
+                                <p class="bg-green message">ciao</p>                                
                             </div>
                             <div class="receive-msg container-flex-end container-flex-start">
                                 <p class="bg-white message">Tutto bene.</p>

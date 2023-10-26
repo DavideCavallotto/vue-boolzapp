@@ -173,3 +173,6 @@ ul {
     color: var(--dark-gray);
 }
 
+.focus-utent {
+    background-color: var(--gray);
+}
