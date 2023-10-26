@@ -1,10 +1,22 @@
+:root {
+    --dark-green: #019689;
+    --light-green: #d7f9bc;
+    --dark-gray: #989798;
+    --gray: #ebe9eb;
+    --blue:#8edafd;
+    --light:#ffff;
+    --dark: black;
+}
+
 body {
     height: 100vh;    
 }
+
 .col-4 {
     border: 1px solid black;    
     padding: 0;
 }
+
 .col-8 {
     border: 1px solid black;    
     padding: 0;
@@ -14,12 +26,12 @@ body {
     border: 1px solid black;
     height: 100px;
     width: 100%;    
-    background-color: green;    
+    background-color: var(--dark-green);    
 }
 
 main { 
     flex-grow: 1; 
-    background-color: grey;
+    background-color: var(--dark-gray);
 }
 
 .container {
@@ -32,33 +44,36 @@ main {
 }
 
 .user {
-    height: 50px;
-    background-color: gainsboro;
-    width: 100%;    
+    height: 80px;
+    background-color: var(--gray);
+    width: 100%;
+    padding: 20px;
+     
 }
 
 .notification {
     height: 60px;
-    background-color: aqua;
-    width: 100%;    
+    background-color: var(--blue);
+    width: 100%; 
+    padding-left: 10px;       
 }
 
 .search {
     height: 40px;
-    background-color: gainsboro;
+    background-color: var(--gray);
     width: 100%;    
 }
 
 .contacts {
     width: 100%;
-    background-color: chocolate;
+    background-color: var(--light);
     flex-grow: 1;
 } 
 
 .user-contact {
-    height: 50px;
+    height: 80px;
     width: 100%;
-    background-color: gainsboro;    
+    background-color: var(--gray);    
 }
 
 .chat {
@@ -67,7 +82,68 @@ main {
 }
 
 .bar-message {
-    height: 50px;
+    height: 80px;
     width: 100%;
-    background-color: gainsboro;
+    background-color: var(--gray);
 }
+
+.user-image {
+    border-radius: 999px;
+    width: 50px;
+}
+
+h5,p {
+    margin: 0;
+}
+
+.icons {
+    font-size: 20px;
+    color: darkgray;
+}
+
+.circle {
+    background-color: white;
+    display: inline-block;
+    border-radius: 60px;    
+    padding: 0.5em 0.6em;    
+    color: var(--blue);
+    font-size: 20px;
+    align-self: center;
+}
+
+.text-notification {
+    line-height: 20px;
+    font-size: 12.5px;
+    font-weight: bold;
+}
+
+.search-btn {
+    border: none;
+    background-color: var(--light);
+    color: #989798;
+    width: 50px;
+}
+
+.chat-input {
+    flex-grow: 1;
+    border: none;
+    padding-left: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.list-contacts {
+    padding: 0;
+}
+
+.contact {
+    border-top: 1px solid var(--gray);        
+}
+
+.user-text p:last-child {
+    font-size: 13px;
+    color: var(--dark-gray);
+}
+
