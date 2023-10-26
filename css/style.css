@@ -12,18 +12,15 @@ body {
     height: 100vh;    
 }
 
-.col-4 {
-    border: 1px solid black;    
+.col-4 {       
     padding: 0;
 }
 
-.col-8 {
-    border: 1px solid black;    
+.col-8 {      
     padding: 0;
 }
 
-.header {
-    border: 1px solid black;
+.header {    
     height: 100px;
     width: 100%;    
     background-color: var(--dark-green);    
@@ -73,12 +70,15 @@ main {
 .user-contact {
     height: 80px;
     width: 100%;
-    background-color: var(--gray);    
+    background-color: var(--gray);  
+    padding: 20px;
+    border-left: 1px solid var(--dark-gray);  
 }
 
 .chat {
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
+    padding: 70px;
 }
 
 .bar-message {
@@ -144,6 +144,32 @@ ul {
 
 .user-text p:last-child {
     font-size: 13px;
+    color: var(--dark-gray);
+}
+
+.bg-green {
+    background-color: var(--light-green);
+}
+
+.bg-white {
+    background-color: var(--light);
+}
+
+.container-flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-flex-start {
+    justify-content: flex-start;
+}
+
+.message {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.bar-message .icons {
     color: var(--dark-gray);
 }
 
