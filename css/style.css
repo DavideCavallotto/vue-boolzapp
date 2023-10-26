@@ -1,0 +1,73 @@
+body {
+    height: 100vh;    
+}
+.col-4 {
+    border: 1px solid black;    
+    padding: 0;
+}
+.col-8 {
+    border: 1px solid black;    
+    padding: 0;
+}
+
+.header {
+    border: 1px solid black;
+    height: 100px;
+    width: 100%;    
+    background-color: green;    
+}
+
+main { 
+    flex-grow: 1; 
+    background-color: grey;
+}
+
+.container {
+    position: relative;
+    top: -70px;    
+}
+
+.row {
+    height: 1200px;
+}
+
+.user {
+    height: 50px;
+    background-color: gainsboro;
+    width: 100%;    
+}
+
+.notification {
+    height: 60px;
+    background-color: aqua;
+    width: 100%;    
+}
+
+.search {
+    height: 40px;
+    background-color: gainsboro;
+    width: 100%;    
+}
+
+.contacts {
+    width: 100%;
+    background-color: chocolate;
+    flex-grow: 1;
+} 
+
+.user-contact {
+    height: 50px;
+    width: 100%;
+    background-color: gainsboro;    
+}
+
+.chat {
+    flex-grow: 1;
+    background-image: url(../img/mine.jpg);
+}
+
+.bar-message {
+    height: 50px;
+    width: 100%;
+    background-color: gainsboro;
+}
