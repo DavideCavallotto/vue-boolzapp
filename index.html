@@ -45,13 +45,19 @@
                         </div>
                         <div class="contacts">
                             <ul class="list-contacts d-flex flex-column">
-                                <li class="contact d-flex gap-3 py-2 ps-2">                                    
-                                    <img class="user-image" src="./img/avatar_1.jpg" alt="">  
+                                <li class="contact d-flex gap-3 py-2 ps-2" v-for="(item,index) in contacts">                                    
+                                    <img class="user-image" :src="item.avatar" alt="">  
+                                    <div class="user-text">
+                                        <p class="fw-bold">{{item.name}}</p>  
+                                        <p>Ultimo messaggio inviato</p>                                     
+
+                                    </div>   
+                                    <!-- <img class="user-image" src="./img/avatar_1.jpg" alt="">  
                                     <div class="user-text">
                                         <p class="fw-bold">Liborio</p>  
                                         <p>Ultimo messaggio inviato</p>                                     
 
-                                    </div>                                 
+                                    </div>                                -->
                                 </li>                                
                                 
                             </ul>
