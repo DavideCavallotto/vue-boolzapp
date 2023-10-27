@@ -147,8 +147,11 @@ ul {
     padding: 70px;
 }
 
-.container-flex-end {
+.chat-message {
     display: flex;
+}
+
+.container-flex-end {    
     justify-content: flex-end;
 }
 
@@ -167,6 +170,7 @@ ul {
 .message {
     border-radius: 5px;
     padding: 5px;
+    margin: 2px;
 }
 /* Bar Message */
 

@@ -7,6 +7,7 @@ createApp({
     return {    
          
         activeUtent: 0,
+        newMessage: '',
         contacts: [
             {
             name: 'Michele',
@@ -177,7 +178,32 @@ createApp({
     changeUser(index) {
         this.activeUtent = index;
         console.log('ho cliccato', index)
-    }
+    },
+    addMessage() {        
+
+        const newMsg = {            
+            message: this.newMessage,
+            status: 'sent'               
+
+        }        
+        console.log(this.newMessage)
+        this.contacts[this.activeUtent].messages.push(newMsg) 
+        console.log(newMsg)
+
+        this.newMessage = ''  
+        
+        setTimeout(() => {
+            const newMsgSend = {            
+                message: 'Ok',
+                status: 'received'               
+    
+            }        
+            this.contacts[this.activeUtent].messages.push(newMsgSend)                       
+             
+        }, 1000);         
+    },
+    
+
   }
 }).mount('#app')
 
