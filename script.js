@@ -8,6 +8,8 @@ createApp({
          
         activeUtent: 0,
         newMessage: '',
+        searchArray: [],
+        inputValue: '',
         contacts: [
             {
             name: 'Michele',
@@ -202,6 +204,31 @@ createApp({
              
         }, 1000);         
     },
+
+    newArrayWord() {
+        this.searchArray.push(this.inputValue)
+        const lastItemArray = this.searchArray.slice(-1)
+        const convertInSTring = lastItemArray.toString()
+        console.log(this.searchArray)
+
+        for (let i = 0; i < this.contacts.length; i++) {
+            const utentCurrent = this.contacts[i]
+            const nameCurrent = utentCurrent.name.toLowerCase()
+            console.log(i,nameCurrent)
+
+            if (nameCurrent.includes(convertInSTring)) {
+               utentCurrent.visible = true 
+            } else {
+                utentCurrent.visible = false
+            }
+
+
+        }
+
+    },
+
+    
+    
     
 
   }

@@ -187,3 +187,8 @@ ul {
 .focus-utent {
     background-color: var(--gray);
 }
+
+
+.list-contacts li:hover {
+    background-color: var(--gray);
+}
