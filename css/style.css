@@ -8,6 +8,7 @@
     --dark: black;
 }
 
+
 body {
     height: 100vh;    
 }
@@ -40,58 +41,6 @@ main {
     height: 1200px;
 }
 
-.user {
-    height: 80px;
-    background-color: var(--gray);
-    width: 100%;
-    padding: 20px;
-     
-}
-
-.notification {
-    height: 60px;
-    background-color: var(--blue);
-    width: 100%; 
-    padding-left: 10px;       
-}
-
-.search {
-    height: 40px;
-    background-color: var(--gray);
-    width: 100%;    
-}
-
-.contacts {
-    width: 100%;
-    background-color: var(--light);
-    flex-grow: 1;
-} 
-
-.user-contact {
-    height: 80px;
-    width: 100%;
-    background-color: var(--gray);  
-    padding: 20px;
-    border-left: 1px solid var(--dark-gray);  
-}
-
-.chat {
-    flex-grow: 1;
-    background-image: url(../img/mine.jpg);
-    padding: 70px;
-}
-
-.bar-message {
-    height: 80px;
-    width: 100%;
-    background-color: var(--gray);
-}
-
-.user-image {
-    border-radius: 999px;
-    width: 50px;
-}
-
 h5,p {
     margin: 0;
 }
@@ -99,6 +48,32 @@ h5,p {
 .icons {
     font-size: 20px;
     color: darkgray;
+}
+
+ul {
+    list-style: none;
+}
+
+/* User */
+.user {
+    height: 80px;
+    background-color: var(--gray);
+    width: 100%;
+    padding: 20px;
+    
+}
+
+.user-image {
+    border-radius: 999px;
+    width: 50px;
+}
+
+/* Notification and search bar */
+.notification {
+    height: 60px;
+    background-color: var(--blue);
+    width: 100%; 
+    padding-left: 10px;       
 }
 
 .circle {
@@ -130,9 +105,18 @@ h5,p {
     padding-left: 10px;
 }
 
-ul {
-    list-style: none;
+.search {
+    height: 40px;
+    background-color: var(--gray);
+    width: 100%;    
 }
+
+/* Contacts */
+.contacts {
+    width: 100%;
+    background-color: var(--light);
+    flex-grow: 1;
+} 
 
 .list-contacts {
     padding: 0;
@@ -147,12 +131,20 @@ ul {
     color: var(--dark-gray);
 }
 
-.bg-green {
-    background-color: var(--light-green);
+.user-contact {
+    height: 80px;
+    width: 100%;
+    background-color: var(--gray);  
+    padding: 20px;
+    border-left: 1px solid var(--dark-gray);  
 }
 
-.bg-white {
-    background-color: var(--light);
+/* Chat */
+
+.chat {
+    flex-grow: 1;
+    background-image: url(../img/mine.jpg);
+    padding: 70px;
 }
 
 .container-flex-end {
@@ -164,9 +156,24 @@ ul {
     justify-content: flex-start;
 }
 
+.bg-green {
+    background-color: var(--light-green);
+}
+
+.bg-white {
+    background-color: var(--light);
+}
+
 .message {
     border-radius: 5px;
     padding: 5px;
+}
+/* Bar Message */
+
+.bar-message {
+    height: 80px;
+    width: 100%;
+    background-color: var(--gray);
 }
 
 .bar-message .icons {

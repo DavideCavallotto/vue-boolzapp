@@ -89,7 +89,7 @@
                         </div>
 
                         <div class="chat">
-                            <div class="send-msg container-flex-end">                                
+                            <div class="send-msg container-flex-end"  v-for="(message,index) in contacts[activeUtent].messages">                                
                                 <p class="bg-green message">ciao</p>                                
                             </div>
                             <div class="receive-msg container-flex-end container-flex-start">
