@@ -95,7 +95,14 @@
                             <div class="chat-message" 
                                 v-for="(item,index) in contacts[activeUtent].messages" 
                                 :class="item.status === 'received' ? 'container-flex-start' : 'container-flex-end' ">                                
-                                <p class="message" :class="item.status === 'received' ? 'bg-white' : 'bg-green' ">{{ item.message }}</p>                                
+                                <p class="message" :class="item.status === 'received' ? 'bg-white' : 'bg-green' ">
+                                    {{ item.message }}<span @click="showMe(index)" class="ms-1 arrow"><i class="fa-solid fa-chevron-down arrow"></i></span>
+                                    <div v-show="boxShow && index === this.activeMessage" class="box">
+                                        <span class="me-2 action"><i class="fa-solid fa-info"></i></span>
+                                        <span @click="removeMessage(index)" class="action"><i class="fa-regular fa-trash-can"></i></span>
+                                    </div>
+                                </p>      
+                                                      
                             </div>                            
                         </div>
 

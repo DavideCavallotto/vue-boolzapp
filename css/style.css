@@ -170,8 +170,9 @@ ul {
 .message {
     border-radius: 5px;
     padding: 5px;
-    margin: 2px;
+    margin: 2px;   
 }
+
 /* Bar Message */
 
 .bar-message {
@@ -188,7 +189,34 @@ ul {
     background-color: var(--gray);
 }
 
-
 .list-contacts li:hover {
     background-color: var(--gray);
 }
+
+.arrow {
+    display: none;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.message:hover .arrow {
+    display: inline-block;
+}
+
+.active{
+    display: inline;
+}
+
+.box {    
+    background-color: white;
+    padding: 5px;
+    border-radius: 8px;
+    position: relative;
+    top: 25px;
+    border: 1px solid black;
+}
+
+.action {
+    cursor: pointer;
+}
+

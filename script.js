@@ -3,13 +3,15 @@ console.log('Siamo dentro!')
 const { createApp } = Vue
 
 createApp({
+
   data() {
     return {    
-         
+        boxShow: false,         
         activeUtent: 0,
+        activeMessage: 0,        
         newMessage: '',
         searchArray: [],
-        inputValue: '',
+        inputValue: '',        
         contacts: [
             {
             name: 'Michele',
@@ -181,6 +183,7 @@ createApp({
         this.activeUtent = index;
         console.log('ho cliccato', index)
     },
+
     addMessage() {        
 
         const newMsg = {            
@@ -226,6 +229,15 @@ createApp({
         }
 
     },
+
+    showMe(index) { 
+        this.activeMessage = index       
+        this.boxShow = !this.boxShow
+    },
+
+    removeMessage (index) {        
+        this.contacts[this.activeUtent].messages.splice(index,1)
+    }
 
     
     
