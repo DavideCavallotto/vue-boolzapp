@@ -232,11 +232,14 @@ createApp({
 
     showMe(index) { 
         this.activeMessage = index       
-        this.boxShow = !this.boxShow
+        this.boxShow = !this.boxShow       
+        console.log(this.boxShow)
     },
 
     removeMessage (index) {        
         this.contacts[this.activeUtent].messages.splice(index,1)
+        console.log('ho eliminato il messaggio', index)
+        
     }
 
     

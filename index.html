@@ -96,14 +96,14 @@
                                 v-for="(item,index) in contacts[activeUtent].messages" 
                                 :class="item.status === 'received' ? 'container-flex-start' : 'container-flex-end' ">                                
                                 <p class="message" :class="item.status === 'received' ? 'bg-white' : 'bg-green' ">
-                                    {{ item.message }}<span @click="showMe(index)" class="ms-1 arrow"><i class="fa-solid fa-chevron-down arrow"></i></span>
-                                    <div v-show="boxShow && index === this.activeMessage" class="box">
+                                    {{ item.message }}<span @click="showMe(index)" class="ms-1 arrow"><i class="fa-solid fa-chevron-down arrow"></i></span>                                         
+                                    <div v-show="boxShow && index === this.activeMessage" class="box" @mouseleave="this.boxShow = false">
                                         <span class="me-2 action"><i class="fa-solid fa-info"></i></span>
                                         <span @click="removeMessage(index)" class="action"><i class="fa-regular fa-trash-can"></i></span>
                                     </div>
-                                </p>      
-                                                      
+                                </p>
                             </div>                            
+                            
                         </div>
 
                         <div class="bar-message d-flex align-items-center py-2 px-4 gap-5">
